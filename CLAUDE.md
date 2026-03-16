@@ -35,6 +35,7 @@ npm run lint     # ESLint
 | Component | Path | Description |
 |-----------|------|-------------|
 | `StatusBar` | `src/components/StatusBar.tsx` | 상태바 (시간 실시간 연동, 배터리 애니메이션) |
+| `HomeIndicator` | `src/components/HomeIndicator.tsx` | 홈 인디케이터 (검정 바 고정, 반응형) |
 | `Banner` | `src/components/Banner.tsx` | 메인 배너 |
 | `SearchBox` | `src/components/SearchBox.tsx` | 검색창 |
 | `ScrollToTopButton` | `src/components/ScrollToTopButton.tsx` | 상단으로 스크롤 버튼 |
@@ -75,6 +76,27 @@ npm run lint     # ESLint
 ### 아이콘
 - 신호 · 와이파이: Figma 원본 SVG path 사용 (fill `#222227`)
 - 배터리 캡: `2×6px` / `#B2B2B2`
+
+---
+
+## HomeIndicator Spec
+
+> `src/components/HomeIndicator.tsx`
+
+| 항목 | 값 |
+|------|-----|
+| 높이 | `34px` |
+| 배경 | `#FFFFFF` |
+| 너비 | `100%` (반응형) |
+
+### 검정 바
+| 항목 | 값 |
+|------|-----|
+| 너비 | `134px` (고정) |
+| 높이 | `5px` |
+| 색상 | `#000000` |
+| 모서리 | `200px` (pill) |
+| 위치 | 수평 중앙, top `21px` |
 
 ---
 
