@@ -34,6 +34,7 @@ npm run lint     # ESLint
 
 | Component | Path | Description |
 |-----------|------|-------------|
+| `StatusBar` | `src/components/StatusBar.tsx` | 상태바 (시간 실시간 연동, 배터리 애니메이션) |
 | `Banner` | `src/components/Banner.tsx` | 메인 배너 |
 | `SearchBox` | `src/components/SearchBox.tsx` | 검색창 |
 | `ScrollToTopButton` | `src/components/ScrollToTopButton.tsx` | 상단으로 스크롤 버튼 |
@@ -44,6 +45,36 @@ npm run lint     # ESLint
 | `Content3` + `Content3Slider` | `src/components/Content3.tsx` | 콘텐츠 3 + 슬라이더 |
 | `Content4` + `Content4Slider` | `src/components/Content4.tsx` | 콘텐츠 4 + 슬라이더 |
 | `Content5` + `Content5Slider` | `src/components/Content5.tsx` | 콘텐츠 5 + 슬라이더 |
+
+---
+
+## StatusBar Spec
+
+> `src/components/StatusBar.tsx` — `"use client"` 필수
+
+| 항목 | 값 |
+|------|-----|
+| 높이 | `50px` |
+| 배경 | `#FFFFFF` |
+| 좌측 패딩 | `24px` |
+| 우측 패딩 | `16px` |
+| 너비 | `100%` (반응형) |
+
+### 시간
+- 현재 시간 실시간 연동 (`HH:MM` 포맷, 24시간)
+- Font: `SF Pro, Apple SD Gothic Neo, sans-serif` / 15px / weight 600 / color `#222227`
+
+### 배터리 애니메이션
+- 10분 주기로 100% → 1% 무한 반복
+- 100%: `#00C27C` (초록)
+- 99~20%: `#222227` (블랙)
+- 19~1%: `#F82D3E` (빨강)
+- 배터리 바디: 가로 `25px` / 세로 `14px` / 회색(`#B2B2B2`) 배경 위에 컬러 fill
+- 숫자 텍스트: `12px` / weight 700 / 흰색
+
+### 아이콘
+- 신호 · 와이파이: Figma 원본 SVG path 사용 (fill `#222227`)
+- 배터리 캡: `2×6px` / `#B2B2B2`
 
 ---
 
