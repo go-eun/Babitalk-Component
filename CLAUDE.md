@@ -36,6 +36,7 @@ npm run lint     # ESLint
 |-----------|------|-------------|
 | `StatusBar` | `src/components/StatusBar.tsx` | 상태바 (시간 실시간 연동, 배터리 애니메이션) |
 | `HomeIndicator` | `src/components/HomeIndicator.tsx` | 홈 인디케이터 (검정 바 고정, 반응형) |
+| `TabBar` | `src/components/TabBar.tsx` | 5탭 하단 네비게이션 (클릭 색상 전환, 반응형) |
 | `Banner` | `src/components/Banner.tsx` | 메인 배너 |
 | `SearchBox` | `src/components/SearchBox.tsx` | 검색창 |
 | `ScrollToTopButton` | `src/components/ScrollToTopButton.tsx` | 상단으로 스크롤 버튼 |
@@ -97,6 +98,47 @@ npm run lint     # ESLint
 | 색상 | `#000000` |
 | 모서리 | `200px` (pill) |
 | 위치 | 수평 중앙, top `21px` |
+
+---
+
+## TabBar Spec
+
+> `src/components/TabBar.tsx` — `"use client"` 필수
+
+| 항목 | 값 |
+|------|-----|
+| 높이 | `60px` |
+| 배경 | `#FFFFFF` |
+| 너비 | `100%` (반응형) |
+| 상단 구분선 | `1px` / `#ECECEF` |
+| 좌우 패딩 | `16px` |
+| 탭 간격 | `22px` |
+
+### 각 탭 (Atom)
+| 항목 | 값 |
+|------|-----|
+| 너비 | `52px` (고정) |
+| 아이콘 크기 | `24×24px` |
+| 아이콘-텍스트 간격 | `3px` |
+| 텍스트 | `10px` / Bold(700) / `Apple SD Gothic Neo` |
+
+### 색상 토큰
+| 상태 | 토큰 | Hex |
+|------|------|-----|
+| 활성 (클릭) | `Label/Common 9(1000)` | `#313142` |
+| 비활성 | `Label/Disabled` | `#C8C7CF` |
+
+### 탭 구성 (좌→우)
+| 순서 | ID | 라벨 |
+|------|----|------|
+| 1 | `home` | 홈 |
+| 2 | `service` | 전체 서비스 |
+| 3 | `community` | 커뮤니티 |
+| 4 | `scrap` | 저장함 |
+| 5 | `mybabitalk` | MY 바비톡 |
+
+- 기본 활성 탭: `home`
+- 아이콘: Figma 원본 SVG path 인라인 사용
 
 ---
 
