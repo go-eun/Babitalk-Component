@@ -34,6 +34,7 @@ npm run lint     # ESLint
 
 | Component | Path | Description |
 |-----------|------|-------------|
+| `NavigationBar` | `src/components/NavigationBar.tsx` | 상단 네비게이션 바 (home / back / title 3종) |
 | `StatusBar` | `src/components/StatusBar.tsx` | 상태바 (시간 실시간 연동, 배터리 애니메이션) |
 | `HomeIndicator` | `src/components/HomeIndicator.tsx` | 홈 인디케이터 (검정 바 고정, 반응형) |
 | `TabBar` | `src/components/TabBar.tsx` | 5탭 하단 네비게이션 (클릭 색상 전환, 반응형) |
@@ -47,6 +48,45 @@ npm run lint     # ESLint
 | `Content3` + `Content3Slider` | `src/components/Content3.tsx` | 콘텐츠 3 + 슬라이더 |
 | `Content4` + `Content4Slider` | `src/components/Content4.tsx` | 콘텐츠 4 + 슬라이더 |
 | `Content5` + `Content5Slider` | `src/components/Content5.tsx` | 콘텐츠 5 + 슬라이더 |
+
+---
+
+## NavigationBar Spec
+
+> `src/components/NavigationBar.tsx` — `"use client"` 필수
+
+| 항목 | 값 |
+|------|-----|
+| 높이 | `56px` |
+| 배경 | `#FFFFFF` |
+| 너비 | `100%` (반응형) |
+
+### 타입 3종
+
+**home**
+- 좌측: Babitalk 로고 (`#8841FA`)
+- 우측: 검색 + 알림 아이콘, 간격 `16px`
+- 좌우 패딩: `18px`
+
+**back**
+- 좌측: 뒤로가기 화살표 + 홈 아이콘 + 타이틀
+- 타이틀: `18px` / Bold(700) / `#313142` / `Apple SD Gothic Neo`
+- 우측: 아이콘 0~3개 자유 조합 (share, trash, more 중 선택), 간격 `16px`
+- 좌우 패딩: `12px`
+
+**title**
+- 좌측: 타이틀 텍스트
+- 타이틀: `21px` / Bold(700) / `#313142` / `Apple SD Gothic Neo`
+- 우측: 아이콘 0~3개 자유 조합 (search, notification 중 선택), 간격 `16px`
+- 좌우 패딩: `16px`
+
+### 아이콘
+| 항목 | 값 |
+|------|-----|
+| 색상 | `Icon/Common 7(600)` / `#7E7E8F` |
+| 크기 | `24×24px` |
+| 우측 아이콘 종류 | `search` / `notification` / `share` / `trash` / `more` |
+| 우측 아이콘 개수 | 0~3개 자유 조합 |
 
 ---
 
